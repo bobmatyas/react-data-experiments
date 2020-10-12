@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GitHubUser from './components/GitHubUser.js'
+import GitHubUserLoading from './components/GitHubUserLoading.js'
+import PeakList from './components//PeakList';
+import PeakListwithListComponent from './components/PeakListwithListComponent'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GitHubUser login="bobmatyas" />
+
+      <h2>With Loading State</h2>
+      <GitHubUserLoading login="bobmatyas" />
+
+      <h2>List Sample</h2>
+      <PeakList />
+
+      <h2>List with Separate List Component</h2>
+
+      <PeakListwithListComponent />
+
     </div>
   );
 }
